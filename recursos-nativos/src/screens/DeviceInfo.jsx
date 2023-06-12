@@ -4,6 +4,10 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        gap: 10,
+    },
     header: {
         paddingTop: 30,
         backgroundColor: '#606',
@@ -21,7 +25,7 @@ const styles = StyleSheet.create({
 
 function DeviceInfo({ navigation }){
     return(
-        <View>
+        <View style={styles.container}>
             <View>
                 <Header
                     title='Informações do Aparelho'
