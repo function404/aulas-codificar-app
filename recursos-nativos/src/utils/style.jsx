@@ -11,6 +11,10 @@ const styles = StyleSheet.create({
     padding: 20,
     alignSelf: "center",
   },
+  infoBox: {
+    marginTop: 15,
+    marginHorizontal: 15,
+  },
 });
 
 export default styles;
