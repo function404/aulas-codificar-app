@@ -27,7 +27,7 @@ export default function Home({ navigation }){
             <View style={styles.infoBox}>
                 <Button
                     title='Orientação'
-                    onPress={() => navigation.navigate('Orientacao')} 
+                    onPress={() => navigation.navigate('Orientação')} 
                 >
                 </Button>
             </View>
@@ -35,6 +35,13 @@ export default function Home({ navigation }){
                 <Button
                     title='Notificação'
                     onPress={() => navigation.navigate('Notify')} 
+                >
+                </Button>
+            </View>
+            <View style={styles.infoBox}>
+                <Button
+                    title='Contato'
+                    onPress={() => navigation.navigate('Contact')} 
                 >
                 </Button>
             </View>

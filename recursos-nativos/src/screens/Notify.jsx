@@ -1,4 +1,5 @@
 import * as Notifications from 'expo-notifications';
+import * as Device from 'expo-device';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -60,6 +61,20 @@ function Notify({ navigation }){
         setExpoToken(token);
     }
 
+    async function nomeDoDispositivo(){
+        const token = await Notifications.scheduleNotificationAsync({
+            content: {
+                title: 'Nome do dispositvo', // nome do app   
+                subtitle: 'FIFIFIU', // nome da notificação
+                body: 'O nome do dispositvo é '+ Device.deviceName + '.', // conteudo/mensagem da notificação
+            },
+            trigger: {
+                seconds: 3,
+            }
+        })
+        setExpoToken(token);
+    }
+
     const ultimaNotificacao = Notifications.useLastNotificationResponse();
 
     async function exibirNotificacao(){
@@ -110,6 +125,11 @@ function Notify({ navigation }){
                 <View style={styles.infoBox}>
                     <Button title='teste'
                             onPress={async () => notificarNot()}/>
+                </View>
+
+                <View style={styles.infoBox}>
+                    <Button title='nome do cell'
+                            onPress={async () => nomeDoDispositivo()}/>
                 </View>
                 
             </View>

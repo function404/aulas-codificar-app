@@ -29,8 +29,8 @@ export default function BatteryInfo({ navigation }) {
 
   }
 
-  const sdasdasda = () => {
-    if (batteryLevel < 20) {
+  const cor = () => {
+    if (batteryLevel < 30) {
       setFundo('red');
       setBatteryStatus('Bateria Fraca');
     } else if (batteryLevel < 50) {
@@ -60,7 +60,7 @@ export default function BatteryInfo({ navigation }) {
 
   useEffect(() => {
     getBatteryLevel();
-    sdasdasda();
+    cor();
   }, [batteryLevel]);
 
   return (

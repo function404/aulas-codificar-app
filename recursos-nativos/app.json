@@ -25,11 +25,18 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      ["expo-screen-orientation",
-      {
-        "initialOrientation": "DEFAULT"
-      }
-    ]
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts."
+        }
+      ]
     ]
   }
 }

@@ -1,7 +1,8 @@
 import * as ScreenOrientation from "expo-screen-orientation";
-import { View, Button, StyleSheet } from "react-native";
+import { View, Button, StyleSheet, ScrollView } from "react-native";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { useEffect, useState } from "react";
 
 const styles = StyleSheet.create({
   container: {
@@ -28,34 +29,42 @@ const styles = StyleSheet.create({
 });
 
 export default function Orientacao({ navigation }) {
+  const [Color, setColor] = useState('');
+
 
   async function defaultOrientation(e) {
     if (e === 'DEFAULT' ){
     await ScreenOrientation.lockAsync(
       ScreenOrientation.OrientationLock.DEFAULT
-    )} else if (e === 'UP'){
+    );setColor('rgb(255, 0, 0)');
+  } else if (e === 'UP'){
     await ScreenOrientation.lockAsync(
       ScreenOrientation.OrientationLock.PORTRAIT_UP
-    )} else if (e === 'DOWN'){
+    );setColor('rgba(255, 0, 0, 0.7)');
+  } else if (e === 'DOWN'){
     await ScreenOrientation.lockAsync(
       ScreenOrientation.OrientationLock.PORTRAIT_DOWN
-    )} else if (e === 'LEFT'){
+    );setColor('rgba(255, 0, 0, 0.5)');
+  } else if (e === 'LEFT'){
     await ScreenOrientation.lockAsync(
       ScreenOrientation.OrientationLock.LANDSCAPE_LEFT
-    )} else if (e === 'RIGHT'){
+    );setColor('rgba(0, 128, 0, 0.8)');
+  } else if (e === 'RIGHT'){
     await ScreenOrientation.lockAsync(
         ScreenOrientation.OrientationLock.LANDSCAPE_RIGHT
-    )};
+    );setColor('rgba(0, 128, 0, 0.8)');
+  };
     }
 
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={[styles.container, {backgroundColor: Color}]}>
       <View>
         <Header title="Orientação de Tela" />
       </View>
 
       <View style={styles.btnOrientation}>
-        <Button title="Default" onPress={() => defaultOrientation('DEFAULT')} />
+        <Button style={styles.btn} title="Default" onPress={() => defaultOrientation('DEFAULT')} />
       </View>
       <View style={styles.btnOrientation}>
         <Button title="UP" onPress={() => defaultOrientation('UP')} />
@@ -73,6 +82,6 @@ export default function Orientacao({ navigation }) {
       <View>
         <Footer />
       </View>
-    </View>
+    </ScrollView>
   );
 }
