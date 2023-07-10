@@ -47,6 +47,20 @@ function Notify({ navigation }){
         setExpoToken(token);
     }
 
+    async function notificarScheduled(){
+        const token = await Notifications.scheduleNotificationAsync({
+            content: {
+                title: 'OIOI', // nome do app   
+                subtitle: 'Agenda', // nome da notificação
+                body: 'Notificação Agendada', // conteudo/mensagem da notificação
+            },
+            trigger: {
+                seconds: 7,
+            }
+        })
+        setExpoToken(token);
+    }
+
     async function notificarNot(){
         const token = await Notifications.scheduleNotificationAsync({
             content: {
@@ -131,7 +145,12 @@ function Notify({ navigation }){
                     <Button title='nome do cell'
                             onPress={async () => nomeDoDispositivo()}/>
                 </View>
-                
+
+                <View style={styles.infoBox}>
+                    <Button title='Agendar Notificação de 7 segundos'
+                            onPress={async () => notificarScheduled()}/>
+                </View>
+
             </View>
 
             <View>

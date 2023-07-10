@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Battery from 'expo-battery';
 
 import { Button, View } from 'react-native';
 

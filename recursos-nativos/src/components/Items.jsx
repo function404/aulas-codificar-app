@@ -23,24 +23,26 @@ const styles = StyleSheet.create({
 
 export default function Items({ item }) {
     return (
-        <Pressable>
-            <View style={styles.content}>
-                <Text style={styles.title}>
+        <Pressable style={{width: '100%'}}>
+            <View style={[styles.list]}>
+                <Text style={styles.titleList}>
                     {item.name}
                 </Text>
 
-                { item?.emails?.length > 0
-                ? <Text style={styles.text}>
-                {item.emails[0].email}
-                </Text>
-                : <></>
+                {item?.emails?.length > 0 ?
+                    <Text style={[styles.textList, styles.listKop]}>
+                        {item.emails[0].email}
+                    </Text>
+                    :
+                    <Text style={styles.textList}></Text>
                 }
 
-                { item?.phoneNumbers?.length > 0
-                ? <Text style={styles.text}>
-                {item.phoneNumbers[0].number}
-                </Text>
-                : <></>
+                {item?.phoneNumbers?.length > 0 ?
+                    <Text style={styles.textList}>
+                        {item.phoneNumbers[0].number}
+                    </Text>
+                    :
+                    <Text style={styles.textList}></Text>
                 }
             </View>
         </Pressable>
