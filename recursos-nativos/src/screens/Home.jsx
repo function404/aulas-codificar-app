@@ -46,6 +46,13 @@ export default function Home({ navigation }){
                 >
                 </Button>
             </View>
+            <View style={styles.infoBox}>
+                <Button
+                    title='Câmera'
+                    onPress={() => navigation.navigate('Camera')} 
+                >
+                </Button>
+            </View>
         </View>
     )
 }

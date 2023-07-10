@@ -9,6 +9,7 @@ import DeviceInfo from './screens/DeviceInfo';
 import Orientacao from './screens/MyScreenOrientation';
 import Notify from './screens/Notify';
 import ContatoInfo from './screens/ContactsInfo';
+import Camera from './screens/camera';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function RootNavigation(){
                 <Stack.Screen name='Orientação' component={Orientacao} />
                 <Stack.Screen name='Notify' component={Notify} />
                 <Stack.Screen name='Contact' component={ContatoInfo} />
+                <Stack.Screen name='Camera' component={Camera} />
             </Stack.Navigator>
         </NavigationContainer>
     )
