@@ -10,6 +10,7 @@ import Orientacao from './screens/MyScreenOrientation';
 import Notify from './screens/Notify';
 import ContatoInfo from './screens/ContactsInfo';
 import Camera from './screens/camera';
+import Sensors from './screens/Sensors';
 
 const Stack = createStackNavigator();
 
@@ -17,13 +18,14 @@ export default function RootNavigation(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name='Home' component={Home}/>
-                <Stack.Screen name='BatteryInfo' component={BatteryInfo} />
-                <Stack.Screen name='DeviceInfo' component={DeviceInfo} />
-                <Stack.Screen name='Orientação' component={Orientacao} />
-                <Stack.Screen name='Notify' component={Notify} />
-                <Stack.Screen name='Contact' component={ContatoInfo} />
-                <Stack.Screen name='Camera' component={Camera} />
+                <Stack.Screen name='Home' component={Home} options={{headerShown: false}} />
+                <Stack.Screen name='BatteryInfo' component={BatteryInfo} options={{headerShown: false}} />
+                <Stack.Screen name='DeviceInfo' component={DeviceInfo} options={{headerShown: false}} />
+                <Stack.Screen name='Orientação' component={Orientacao} options={{headerShown: false}} />
+                <Stack.Screen name='Notify' component={Notify} options={{headerShown: false}} />
+                <Stack.Screen name='Contact' component={ContatoInfo} options={{headerShown: false}} />
+                <Stack.Screen name='Camera' component={Camera} options={{headerShown: false}} />
+                <Stack.Screen name='Sensors' component={Sensors} options={{headerShown: false}} />
             </Stack.Navigator>
         </NavigationContainer>
     )

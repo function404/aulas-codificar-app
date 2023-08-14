@@ -53,6 +53,13 @@ export default function Home({ navigation }){
                 >
                 </Button>
             </View>
+            <View style={styles.infoBox}>
+                <Button
+                    title='Sensors'
+                    onPress={() => navigation.navigate('Sensors')} 
+                >
+                </Button>
+            </View>
         </View>
     )
 }

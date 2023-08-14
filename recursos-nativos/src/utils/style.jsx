@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginHorizontal: 15,
   },
+  text: {
+    
+  },
 });
 
 export default styles;
