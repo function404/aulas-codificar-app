@@ -5,13 +5,13 @@ import * as Battery from 'expo-battery';
 
 const styles = StyleSheet.create({
     header: {
-        paddingTop: 30,
+        margin: 30,
         backgroundColor: '#606',
         paddingBottom: 5,
         paddingHorizontal: 5,
     },  
     headerTextStyle: {
-        marginTop: 10,
+        margin: 30,
         color: 'white',
         fontWeight: 'bold',
         fontSize: 35,

@@ -11,6 +11,7 @@ import Notify from './screens/Notify';
 import ContatoInfo from './screens/ContactsInfo';
 import Camera from './screens/camera';
 import Sensors from './screens/Sensors';
+import Capture from './screens/Capture';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ export default function RootNavigation(){
                 <Stack.Screen name='Contact' component={ContatoInfo} options={{headerShown: false}} />
                 <Stack.Screen name='Camera' component={Camera} options={{headerShown: false}} />
                 <Stack.Screen name='Sensors' component={Sensors} options={{headerShown: false}} />
+                <Stack.Screen name='Capture' component={Capture} options={{headerShown: false}} />
             </Stack.Navigator>
         </NavigationContainer>
     )

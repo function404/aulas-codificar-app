@@ -9,7 +9,7 @@ import styles from '../utils/style';
 
 export default function Home({ navigation }){
     return(
-        <View>
+        <View style={styles.container}>
                 <Header title='Home'/>
             <View style={styles.infoBox}>
                 <Button
@@ -57,6 +57,13 @@ export default function Home({ navigation }){
                 <Button
                     title='Sensors'
                     onPress={() => navigation.navigate('Sensors')} 
+                >
+                </Button>
+            </View>
+            <View style={styles.infoBox}>
+                <Button
+                    title='Capture'
+                    onPress={() => navigation.navigate('Capture')} 
                 >
                 </Button>
             </View>
