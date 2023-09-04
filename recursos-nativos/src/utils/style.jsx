@@ -15,9 +15,16 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginHorizontal: 15,
   },
-  text: {
-    
+  TouchableOpacitybutton: {
+    backgroundColor: "#2196F3",
+    padding: 6,
+    alignItems: "center",
   },
+  text:{
+    color: '#fff',
+    fontSize: 17,
+    textTransform: 'uppercase',
+  }
 });
 
 export default styles;

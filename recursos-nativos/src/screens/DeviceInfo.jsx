@@ -1,5 +1,6 @@
 import * as Device from 'expo-device';
 import { View, Text, StyleSheet } from 'react-native';
+
 import Header from '../components/header';
 import Footer from '../components/footer';
 

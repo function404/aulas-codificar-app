@@ -67,6 +67,13 @@ export default function Home({ navigation }){
                 >
                 </Button>
             </View>
+            <View style={styles.infoBox}>
+                <Button
+                    title='Autenticação'
+                    onPress={() => navigation.navigate('LocalAuthentication')} 
+                >
+                </Button>
+            </View>
         </View>
     )
 }

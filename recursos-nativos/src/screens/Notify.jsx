@@ -121,7 +121,7 @@ function Notify({ navigation }){
             </View>
             
             <View
-                style={styles.content}
+                style={styles.center}
             >
                 <Text styles={styles.txt}>Expo Token: {expoToken}</Text>
 

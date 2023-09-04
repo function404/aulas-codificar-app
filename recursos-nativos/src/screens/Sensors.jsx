@@ -52,7 +52,7 @@ function Sensors(){
     }, [Magneto, Girioscopio, Luz, Acelerometro]);
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView>
             <View style={[styles.container, { backgroundColor: colorBg }]}>
                 <Header title='Sensores' />
                     <View style={styles.center}>

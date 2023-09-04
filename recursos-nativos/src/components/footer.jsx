@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     footer: {
         backgroundColor: '#888',
         paddingHorizontal: 25,
-        padding: 20,
+        padding: 15,
         marginTop: 20,
     }
 });
