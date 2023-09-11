@@ -7,7 +7,7 @@ import Header from '../components/header';
 
 import styles from '../utils/style';
 
-export default function Home({ navigation }){
+function Home({ navigation }){
     return(
         <View style={styles.container}>
                 <Header title='Home'/>
@@ -77,3 +77,5 @@ export default function Home({ navigation }){
         </View>
     )
 }
+
+export default Home;

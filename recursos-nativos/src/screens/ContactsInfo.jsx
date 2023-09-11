@@ -1,34 +1,14 @@
 import * as Contacts from 'expo-contacts';
 import React, { useEffect, useState } from 'react';
 
-import { View, Text, StyleSheet, FlatList, TextInput } from 'react-native';
+import { View, Text, FlatList, TextInput } from 'react-native';
 
-
+import styles from '../utils/style';
 
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Items from '../components/Items';
 
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        gap: 10,
-    },
-    header: {
-        paddingTop: 30,
-        backgroundColor: '#606',
-        paddingBottom: 5,
-        paddingHorizontal: 5,
-    },
-    headerTextStyle: {
-        marginTop: 10,
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 35,
-        textAlign: 'center'
-    },
-});
 
 
 const ContatosInfo = () => {

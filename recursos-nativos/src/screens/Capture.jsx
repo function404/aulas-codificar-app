@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 
 import styles from '../utils/style';
 
-export default function Capture({ navigation }){
+function Capture({ navigation }){
 
     useEffect(() => {
         if (hasPermissions()) {
@@ -55,3 +55,5 @@ export default function Capture({ navigation }){
         </View>
     )
 }
+
+export default Capture;

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default function Orientacao({ navigation }) {
+function Orientacao({ navigation }) {
   const [Color, setColor] = useState('');
 
 
@@ -85,3 +85,4 @@ export default function Orientacao({ navigation }) {
     </ScrollView>
   );
 }
+export default Orientacao;

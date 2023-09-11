@@ -16,7 +16,7 @@ import MyLocalAuthentication from './screens/LocalAuthentication';
 
 const Stack = createStackNavigator();
 
-export default function RootNavigation(){
+function RootNavigation(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
@@ -34,3 +34,5 @@ export default function RootNavigation(){
         </NavigationContainer>
     )
 }
+
+export default RootNavigation;

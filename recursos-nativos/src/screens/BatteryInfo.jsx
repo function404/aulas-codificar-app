@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 
 import styles from '../utils/style';
 
-export default function BatteryInfo({ navigation }) {
+function BatteryInfo({ navigation }) {
   const [batteryLevel, setBatteryLevel] = useState(0);
   const [batteryStatus, setBatteryStatus] = useState();
   const [fundo, setFundo] = useState('');
@@ -74,3 +74,5 @@ export default function BatteryInfo({ navigation }) {
     </View>
   );
 }
+
+export default BatteryInfo;
