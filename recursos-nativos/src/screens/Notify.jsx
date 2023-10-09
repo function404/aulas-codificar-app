@@ -1,34 +1,12 @@
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import { View, Text, StyleSheet, Button } from 'react-native';
-import Header from '../components/header';
-import Footer from '../components/footer';
 import { useState, useEffect } from 'react';
 
+import Header from '../components/header';
+import Footer from '../components/footer';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        gap: 10,
-    },
-    header: {
-        paddingTop: 30,
-        backgroundColor: '#606',
-        paddingBottom: 5,
-        paddingHorizontal: 5,
-    },
-    headerTextStyle: {
-        marginTop: 10,
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 35,
-        textAlign: 'center'
-    },
-    infoBox: {
-        marginTop: 15,
-        marginHorizontal: 15,
-    },
-});
+import styles from '../utils/style';
 
 function Notify({ navigation }){
     const [expoToken, setExpoToken] = useState('');

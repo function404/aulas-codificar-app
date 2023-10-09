@@ -4,25 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        gap: 10,
-    },
-    header: {
-        paddingTop: 30,
-        backgroundColor: '#606',
-        paddingBottom: 5,
-        paddingHorizontal: 5,
-    },
-    headerTextStyle: {
-        marginTop: 10,
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 35,
-        textAlign: 'center'
-    },
-});
+import styles from '../utils/style';
 
 function DeviceInfo({ navigation }){
     return(

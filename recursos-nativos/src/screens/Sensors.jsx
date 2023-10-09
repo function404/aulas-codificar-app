@@ -3,10 +3,12 @@ import { Magnetometer, Gyroscope, LightSensor, Accelerometer } from 'expo-sensor
 
 import { View, Text, ScrollView } from 'react-native';
 
-import styles from '../utils/style';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import { ImageBackground } from 'react-native-web';
+
+import styles from '../utils/style';
+
+
 
 function Sensors(){
 
@@ -52,7 +54,7 @@ function Sensors(){
     }, [Magneto, Girioscopio, Luz, Acelerometro]);
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             <View style={[styles.container, { backgroundColor: colorBg }]}>
                 <Header title='Sensores' />
                     <View style={styles.center}>

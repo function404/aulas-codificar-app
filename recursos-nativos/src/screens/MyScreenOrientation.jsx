@@ -4,29 +4,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { useEffect, useState } from "react";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    gap: 10,
-  },
-  header: {
-    paddingTop: 30,
-    backgroundColor: "#606",
-    paddingBottom: 5,
-    paddingHorizontal: 5,
-  },
-  headerTextStyle: {
-    marginTop: 10,
-    color: "white",
-    fontWeight: "bold",
-    fontSize: 35,
-    textAlign: "center",
-  },
-  btnOrientation: {
-    margin: 25,
-    marginBottom: 0,
-  }
-});
+import styles from "../utils/style";
 
 function Orientacao({ navigation }) {
   const [Color, setColor] = useState('');

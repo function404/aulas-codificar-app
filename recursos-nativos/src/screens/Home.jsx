@@ -49,7 +49,7 @@ function Home({ navigation }){
             <View style={styles.infoBox}>
                 <Button
                     title='Câmera'
-                    onPress={() => navigation.navigate('Camera')} 
+                    onPress={() => navigation.navigate('CameraInfo')} 
                 >
                 </Button>
             </View>
@@ -71,6 +71,13 @@ function Home({ navigation }){
                 <Button
                     title='Autenticação'
                     onPress={() => navigation.navigate('LocalAuthentication')} 
+                >
+                </Button>
+            </View>
+            <View style={styles.infoBox}>
+                <Button
+                    title='Localização'
+                    onPress={() => navigation.navigate('Localization')} 
                 >
                 </Button>
             </View>

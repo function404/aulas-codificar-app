@@ -19,7 +19,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "MEDIA_LIBRARY",
+        "READ_CONTACTS",
+        "WRITE_CONTACTS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,7 +39,13 @@
       [
         "expo-contacts",
         {
-          "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts."
+          "contactsPermission": "ALLOW $(PRODUCT_NAME) to access your contacts."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ALLOW $(PRODUCT_NAME) to access your camera."
         }
       ]
     ]

@@ -9,10 +9,12 @@ import DeviceInfo from './screens/DeviceInfo';
 import Orientacao from './screens/MyScreenOrientation';
 import Notify from './screens/Notify';
 import ContatoInfo from './screens/ContactsInfo';
-import Camera from './screens/camera';
+// import Camera from './screens/camera';
 import Sensors from './screens/Sensors';
 import Capture from './screens/Capture';
 import MyLocalAuthentication from './screens/LocalAuthentication';
+import CameraInfo from './screens/CameraInfo';
+import Localization from './screens/Localization';
 
 const Stack = createStackNavigator();
 
@@ -26,10 +28,12 @@ function RootNavigation(){
                 <Stack.Screen name='Orientação' component={Orientacao} options={{headerShown: false}} />
                 <Stack.Screen name='Notify' component={Notify} options={{headerShown: false}} />
                 <Stack.Screen name='Contact' component={ContatoInfo} options={{headerShown: false}} />
-                <Stack.Screen name='Camera' component={Camera} options={{headerShown: false}} />
+                {/* <Stack.Screen name='Camera' component={Camera} options={{headerShown: false}} /> */}
                 <Stack.Screen name='Sensors' component={Sensors} options={{headerShown: false}} />
                 <Stack.Screen name='Capture' component={Capture} options={{headerShown: false}} />
                 <Stack.Screen name='LocalAuthentication' component={MyLocalAuthentication} options={{headerShown: false}} />
+                <Stack.Screen name='CameraInfo' component={CameraInfo} options={{headerShown: false}} />
+                <Stack.Screen name='Localization' component={Localization} options={{headerShown: false}} />
             </Stack.Navigator>
         </NavigationContainer>
     )
